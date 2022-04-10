@@ -7,8 +7,10 @@ class Config:
     basedir = Path(os.path.abspath(os.path.dirname(__file__))).parent.absolute()
 
     DB_FILE = 'db.sqlite'
+    DB_NAME = 'db_nest'
     DEFAULT_LANG = 'en'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, DB_FILE)
+    SQLALCHEMY_DATABASE_URI = "postgresql://user:user@db:5432/" + DB_NAME
+    # 'sqlite:///' + os.path.join(basedir, DB_FILE)
 
 
 class ConfigLogger:

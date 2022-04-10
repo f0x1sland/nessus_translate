@@ -1,1 +1,4 @@
 /.idea/
+/migrations/
+/db.sqlite
+/nest.log

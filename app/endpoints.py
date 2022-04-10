@@ -28,7 +28,7 @@ def get_plugin():
         'plugin_modification_date': ''
     }
     if plugin_id is not None:
-        plugin = db_handler.get_translate_by_plugin(plugin_id=int(plugin_id), lang=lang)
+        plugin = db_handler.get_translate_by_plugin(plugin_id=plugin_id, lang=lang)
         if plugin is not None:
             result['plugin_id'] = plugin.plugin_id
             result['pluginName'] = plugin.pluginName
