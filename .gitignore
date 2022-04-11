@@ -2,3 +2,4 @@
 /migrations/
 /db.sqlite
 /nest.log
+/postgres/

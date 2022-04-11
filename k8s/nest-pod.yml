@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nest-pod
+  labels:
+    app: nest
+spec:
+  containers:
+    - name: nest
+      image: nest:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 5000
+  restartPolicy: Never

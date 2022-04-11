@@ -7,10 +7,11 @@ ENV PYTHONUNBUFFERED 1
 ENV FLASK_APP=run.py
 ENV FLASK_ENV=development
 
-COPY ./requirements.txt /usr/src/nest/requirements.txt
+# COPY ./requirements.txt /usr/src/nest/requirements.txt
+COPY . /usr/src/nest/
 RUN apt-get update \
     && apt-get -y install libpq-dev gcc \
     && pip install --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
-
+EXPOSE 5000
 CMD [ "python", "run.py" ]
